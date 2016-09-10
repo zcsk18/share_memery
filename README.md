@@ -14,3 +14,9 @@ gcc -o clt clt.c
 shmid:262144
 
 ./clt 262144
+
+#other command
+
+ipcs
+
+ipcrm -m 262144
