@@ -21,8 +21,7 @@ int main(int argc,char **argv){
     c_addr=shmat(shmid,0,0);  
     printf("Client get %s\n",c_addr); 
  
-    char cmd[1024];
-    sprintf(cmd,"ipcrm -m %d", shmid);
-    system(cmd);
+ 
+    shmctl(shmid,IPC_RMID,NULL);
     printf("client rm share memery: %d\n",shmid);
 }  
